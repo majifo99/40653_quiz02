@@ -8,11 +8,16 @@ type Product = {
 }
 
 type MyContextData = {
-    
+    products: Product[];
+    currentStep: number;
+    setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const MyContext = React.createContext<MyContextData>({
-
+  
+    products: [],
+    currentStep: 1,
+    setCurrentStep: () => {}
 });
 
 export default MyContext;
